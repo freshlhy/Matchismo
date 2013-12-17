@@ -1,0 +1,15 @@
+//
+//  PlayingCardDeck.h
+//  Matchismo
+//
+//  Created by freshlhy on 12/17/13.
+//  Copyright (c) 2013 CS193p. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "Deck.h"
+
+
+@interface PlayingCardDeck : Deck
+
+@end
