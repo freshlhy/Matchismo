@@ -48,6 +48,12 @@
     }
 }
 
+- (IBAction)replay:(UIButton *)sender
+{
+    self.game = nil;
+    [self updateUI];
+}
+
 - (NSString *)titleForCard:(Card *)card
 {
     return card.isChosen ? card.contents : @"";
