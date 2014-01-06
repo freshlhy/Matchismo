@@ -48,8 +48,7 @@
     }
 }
 
-- (IBAction)replay:(UIButton *)sender
-{
+- (IBAction)replay:(UIButton *)sender {
     self.game = nil;
     [self updateUI];
 }
