@@ -383,6 +383,7 @@
                     </view>
                     <connections>
                         <outlet property="scoreLabel" destination="ciE-Tg-9uY" id="f2c-W4-IgQ"/>
+                        <outlet property="segmentedControl" destination="t9h-J5-FoR" id="KY9-MA-kAK"/>
                         <outletCollection property="cardButtons" destination="CVU-fN-6zU" id="DdY-Rp-Bos"/>
                         <outletCollection property="cardButtons" destination="zm5-rR-6z6" id="cWh-GT-tix"/>
                         <outletCollection property="cardButtons" destination="x0n-Vj-317" id="vfd-d4-cnX"/>

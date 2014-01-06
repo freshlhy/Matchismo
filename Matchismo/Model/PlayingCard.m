@@ -21,6 +21,10 @@
             score = 1;
         }
     }
+    if ([otherCards count] == 2) {
+        
+    }
+    
     
     return score;
 }

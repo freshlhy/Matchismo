@@ -14,13 +14,29 @@
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
 @end
 
 @implementation CardGameViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.segmentedControl addTarget:self
+                              action:@selector(modeSwiched)
+                    forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)modeSwiched
+{
+    [self refreshBoard];
+}
+
 - (CardMatchingGame *)game
 {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
+                                                            setMode:self.segmentedControl.selectedSegmentIndex
                                                           usingDeck:[self createDeck]];
     return _game;
 }
@@ -49,6 +65,11 @@
 }
 
 - (IBAction)replay:(UIButton *)sender {
+    [self refreshBoard];
+}
+
+-(void)refreshBoard
+{
     self.game = nil;
     [self updateUI];
 }
